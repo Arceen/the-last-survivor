@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multi-window</title>
+    <link rel="stylesheet" href="styles.css"></style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="intro-window">
+        <div id="text-the"><span>T</span>he</div>
+        <h1 id="text-last">
+         <span>L</span>ast
+        </h1>
+        <h1 id="text-survivor">
+          Surviv<span class="hover-item" style="color: red;">o</span>r
+        </h1>
+        <button id="start-button">START</div>
+      </div>
+      <div  hidden id="tutorial-window">
+        <div id="key-w" class="key">W</div>
+        <div id="key-a" class="key">A</div>
+        <div id="key-s" class="key">S</div>
+        <div id="key-d" class="key">D</div>
+      </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script type="module" src="./point.js"></script>
+    <script type="module" src="./utils.js"></script>
+    <script type="module" src="./missile.js"></script>
+    <script type="module" src="./player.js"></script>
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>

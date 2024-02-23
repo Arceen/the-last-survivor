@@ -1,0 +1,205 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    color: white;
+  }
+  div, button{
+    position: absolute;
+  }
+  #container {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+  }
+  .toast-message {
+    position: absolute;
+    border: 1px solid white;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    transform: translate(-50%, -60px);
+  }
+  .toast-message::before {
+    content: "";
+    border-top: 10px solid white;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    position: absolute;
+    left: 50%;
+    top: calc(1px + 100%);
+    transform: translateX(-50%);
+  }
+
+  #intro-window{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    /* border: 2px solid white; */
+    padding: 20px 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #tutorial-window{
+    border: 2px solid white;
+  }
+  
+  #text-the{
+    font-size: 20px;
+    animation-name: fade-in;
+    animation-timing-function: ease-in;
+    animation-duration: 1s;
+    transform: translateY(-50%);
+    letter-spacing: 8px;
+  }
+  #text-last{
+    opacity: 0%;
+    animation: fade-in ease-in 1s forwards;
+    animation-delay: 1s;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    letter-spacing: 12px;
+  }
+  span {
+    font-size: 48px;
+  }
+  #text-survivor{
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 48px;
+    opacity: 0;
+    animation: fade-in ease-in 1s forwards;
+    animation-delay: 2s;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+    
+  }
+.hover-item{
+    display: inline-block;
+    margin-right: 0px;
+    animation: hover ease-in-out 1s infinite;
+}
+
+#start-button{
+    background: black;
+    font-size: 32px;
+    color: white;
+    box-shadow: none;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid white;
+    padding: 20px 40px;
+    position: absolute;
+    cursor: pointer;
+    overflow: clip;
+    opacity:0;
+    animation: fade-in ease-in 1s forwards;
+    animation-delay: 3s;
+}
+#start-button:hover::before{
+    content:"";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: white;
+    left: -150%;
+    top: -50%;
+    border-radius: 50%;
+    animation: left-to-right ease-in-out .8s forwards;
+}
+@keyframes left-to-right{
+0%{
+    left: -120%6
+}
+100%{
+    left: 120%;
+}
+}
+
+@keyframes hover {
+    0%{
+        transform: translateY(-12%)
+    }
+    40%{
+        transform: translateY(10%);
+    }
+    80% {
+        transform: translateY(0%);
+    }
+    100%{
+        transform: translateY(5%);
+    }
+
+}
+  @keyframes fade-in {
+    0%{  
+        
+        opacity: 0%;
+    }
+    100%{
+      
+        opacity: 100%;
+    }
+  }
+
+
+  #tutorial-window{
+    top: 30px;
+    left: 30px;
+    border: none;
+    height: 100px;
+    width: 200px;
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+  }
+  .key{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+    padding: 10px 8px;
+    border-radius: 5px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: key-animate ease-in 5s forwards infinite;
+    
+  }
+  #key-w{
+    top: 0px;
+    left: 70px;
+  }
+  #key-a{
+    top: 70px;
+    left: 0px;
+    animation-delay: 1s;
+  }
+  #key-s{
+    top: 70px;
+    left: 70px;
+    animation-delay: 2s;
+  }
+  #key-d{
+    top: 70px;
+    left: 140px;
+    animation-delay: 3s;
+  }
+
+  @keyframes key-animate{
+    0%{
+        background: white;
+        color: black;
+    }
+    10%{
+        color: white;
+        background-color: black;
+    }
+    100%{
+        color: white;
+        background-color: black;
+    }
+  }
